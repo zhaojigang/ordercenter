@@ -2,6 +2,9 @@ package io.study.order.repository;
 
 import io.study.order.domain.Order;
 import io.study.order.domain.OrderId;
+import io.study.order.dto.OrderQueryRequest;
+
+import java.util.List;
 
 /**
  * 订单仓储接口
@@ -21,4 +24,11 @@ public interface OrderRepository {
      * @param orderId
      */
     Order find(OrderId orderId);
+
+    /**
+     * 根据条件查询请求
+     * @param request
+     * @return
+     */
+    List<Order> findByCondition(OrderQueryRequest request);
 }

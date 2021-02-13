@@ -1,16 +1,14 @@
-package io.study.order.data;
+package io.study.order.dto;
 
 import lombok.Data;
 
-/**
- * 订单数据库对象
- *
- * @author jigang
- */
+import java.io.Serializable;
+
 @Data
-public class OrderDO {
+public class OrderDTO implements Serializable {
+    private static final long serialVersionUID = 8642623148247246765L;
     /**
-     * 订单 ID
+     * 订单ID
      */
     private Long id;
     /**
@@ -18,7 +16,7 @@ public class OrderDO {
      */
     private String name;
     /**
-     * 商品 ID
+     * 商品ID
      */
     private Long goodsId;
     /**

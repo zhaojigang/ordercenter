@@ -12,16 +12,13 @@
     <artifactId>order-starter</artifactId>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>io.study</groupId>-->
-<!--            <artifactId>order-application</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--        </dependency>-->
+        <!-- 基础设施层 -->
         <dependency>
             <groupId>io.study</groupId>
             <artifactId>order-infrastructure</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!-- 用户接口层 -->
         <dependency>
             <groupId>io.study</groupId>
             <artifactId>order-interfaces</artifactId>

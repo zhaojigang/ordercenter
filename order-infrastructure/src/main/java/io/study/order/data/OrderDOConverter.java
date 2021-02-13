@@ -7,6 +7,10 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * OrderDO 转换器
  *
@@ -26,5 +30,12 @@ public interface OrderDOConverter {
         Order order = OrderFactory.createOrder();
         INSTANCE.update(orderDO, order);
         return order;
+    }
+
+    default List<Order> fromDOList(List<OrderDO> orderDOList) {
+        if (orderDOList == null || orderDOList.size()<=0) {
+            return new ArrayList<>(0);
+        }
+        return orderDOList.stream().map(OrderDOConverter.INSTANCE::fromDO).collect(Collectors.toList());
     }
 }

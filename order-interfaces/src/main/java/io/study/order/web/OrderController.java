@@ -3,9 +3,9 @@ package io.study.order.web;
 import io.study.order.app.service.OrderAppService;
 import io.study.order.domain.Order;
 import io.study.order.domain.OrderId;
+import io.study.order.dto.OrderDTO;
 import io.study.order.repository.OrderRepository;
-import io.study.order.web.assembler.OrderDtoAssembler;
-import io.study.order.web.dto.OrderDto;
+import io.study.order.facade.assembler.OrderDTOAssembler;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,12 +34,12 @@ public class OrderController {
     /**
      * 创建一个订单
      *
-     * @param orderDto
+     * @param orderDTO
      */
     @ApiOperation("创建订单")
     @PostMapping("/create")
-    public void createOrder(@RequestBody OrderDto orderDto) {
-        orderAppService.createOrder(OrderDtoAssembler.INSTANCE.fromDTO(orderDto));
+    public void createOrder(@RequestBody OrderDTO orderDTO) {
+        orderAppService.createOrder(OrderDTOAssembler.INSTANCE.fromDTO(orderDTO));
     }
 
     /**
@@ -50,8 +50,8 @@ public class OrderController {
      */
     @ApiOperation("根据订单ID获取订单")
     @GetMapping("/find/{id}")
-    public OrderDto findOrder(@PathVariable Long id) {
+    public OrderDTO findOrder(@PathVariable Long id) {
         Order order = orderRepository.find(OrderId.of(id));
-        return OrderDtoAssembler.INSTANCE.toDTO(order);
+        return OrderDTOAssembler.INSTANCE.toDTO(order);
     }
 }

@@ -12,25 +12,31 @@
     <artifactId>order-interfaces</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        <!-- 领域模块 -->
         <dependency>
             <groupId>io.study</groupId>
             <artifactId>order-domain</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!-- 应用模块 -->
         <dependency>
             <groupId>io.study</groupId>
             <artifactId>order-application</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!-- 打包给三方的接口模块 -->
+        <dependency>
+            <groupId>io.study</groupId>
+            <artifactId>order-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- mapstruct -->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
@@ -45,9 +51,20 @@
             <artifactId>lombok-mapstruct-binding</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- springboot-web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- springfox -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
+        </dependency>
+        <!-- dubbo -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
         </dependency>
     </dependencies>
 

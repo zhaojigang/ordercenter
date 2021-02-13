@@ -21,6 +21,14 @@ public class Order {
      */
     private String name;
     /**
+     * 商品ID
+     */
+    private Long goodsId;
+    /**
+     * 购买数量
+     */
+    private Integer buyQuality;
+    /**
      * 订单仓储
      */
     private OrderRepository orderRepository;

@@ -12,16 +12,25 @@
     <artifactId>order-infrastructure</artifactId>
 
     <dependencies>
+        <!-- 领域模块 -->
         <dependency>
             <groupId>io.study</groupId>
             <artifactId>order-domain</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!-- 应用层模块 -->
+        <dependency>
+            <groupId>io.study</groupId>
+            <artifactId>order-application</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- mapstruct -->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
@@ -36,13 +45,36 @@
             <artifactId>lombok-mapstruct-binding</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- mybatis -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
+        <!-- mysql -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <!-- dubbo -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <!-- 第三方服务 - 库存服务 -->
+        <dependency>
+            <groupId>io.study</groupId>
+            <artifactId>inventory-client</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
