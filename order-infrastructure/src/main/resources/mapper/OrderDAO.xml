@@ -25,7 +25,7 @@
                 id = #{orderId}
             </if>
             <if test="orderName!=null">
-                `name` LIKE '%'+#{orderName}+'%'
+                `name` LIKE  concat('%', #{orderName},'%')
             </if>
         </where>
     </select>

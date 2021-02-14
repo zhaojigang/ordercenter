@@ -4,6 +4,7 @@ import lombok.Data;
 
 /**
  * 库存 DTO
+ *
  * @author jigang
  */
 @Data
