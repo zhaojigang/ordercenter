@@ -1,8 +1,10 @@
 package io.study.order.domain;
 
 import common.ddd.AggregateRoot;
+import common.exception.OrderException;
 import io.study.order.repository.OrderRepository;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -10,6 +12,7 @@ import lombok.Setter;
  *
  * @author jigang
  */
+@NoArgsConstructor
 @Setter
 @Getter
 @AggregateRoot
@@ -46,5 +49,26 @@ public class Order {
      */
     public void saveOrder(Order order) {
         orderRepository.add(order);
+    }
+
+    public void setName(String name) {
+        if (name == null) {
+            throw new OrderException(400, "name 不能为空");
+        }
+        this.name = name;
+    }
+
+    public void setGoodsId(Long goodsId) {
+        if (goodsId == null) {
+            throw new OrderException(400, "goodsId 不能为空");
+        }
+        this.goodsId = goodsId;
+    }
+
+    public void setBuyQuality(Integer buyQuality) {
+        if (buyQuality == null) {
+            throw new OrderException(400, "buyQuality 不能为空");
+        }
+        this.buyQuality = buyQuality;
     }
 }
