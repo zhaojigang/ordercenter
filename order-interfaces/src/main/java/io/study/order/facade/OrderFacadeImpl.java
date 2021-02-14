@@ -25,7 +25,7 @@ public class OrderFacadeImpl implements OrderFacade {
 
     @Override
     public List<OrderDTO> getOrderList(OrderQueryRequest request) {
-        List<Order> orderList = orderRepository.findByCondition(request);
+        List<Order> orderList = orderRepository.ordersOfCondition(request);
         return OrderDTOAssembler.INSTANCE.toDTOList(orderList);
     }
 

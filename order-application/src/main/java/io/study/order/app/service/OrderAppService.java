@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  */
 @Service
 public class OrderAppService {
-    @Resource(name = "dubboInventoryAdaptor")
+//    @Resource(name = "dubboInventoryAdaptor")
     private InventoryAdaptor inventoryAdaptor;
 
     /**
@@ -27,15 +27,15 @@ public class OrderAppService {
         /**
          * 获取商品库存信息，进行校验
          */
-        InventoryDTO inventoryDTO = inventoryAdaptor.getRemainQuality(order.getGoodsId());
-        if (inventoryDTO.getRemainQuantity() - order.getBuyQuality() < 0) {
-            throw new OrderException(400, "商品库存不足");
-        }
+//        InventoryDTO inventoryDTO = inventoryAdaptor.getRemainQuality(order.getGoodsId());
+//        if (inventoryDTO.getRemainQuantity() - order.getBuyQuality() < 0) {
+//            throw new OrderException(400, "商品库存不足");
+//        }
 
         /**
          * 扣减库存
          */
-        inventoryAdaptor.reduceRemainQuality(order.getGoodsId(), order.getBuyQuality());
+//        inventoryAdaptor.reduceRemainQuality(order.getGoodsId(), order.getBuyQuality());
 
         /**
          * 存储订单

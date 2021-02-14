@@ -43,6 +43,6 @@ public class Order {
      * @param order
      */
     public void saveOrder(Order order) {
-        orderRepository.save(order);
+        orderRepository.add(order);
     }
 }

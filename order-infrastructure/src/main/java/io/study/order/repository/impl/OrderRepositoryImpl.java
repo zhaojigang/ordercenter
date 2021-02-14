@@ -23,18 +23,18 @@ public class OrderRepositoryImpl implements OrderRepository {
     private OrderDAO orderDAO;
 
     @Override
-    public void save(Order order) {
+    public void add(Order order) {
         orderDAO.insertSelective(OrderDOConverter.INSTANCE.toDO(order));
     }
 
     @Override
-    public Order find(OrderId orderId) {
+    public Order orderOfId(OrderId orderId) {
         OrderDO orderDO = orderDAO.selectByPrimaryKey(orderId.getId());
         return OrderDOConverter.INSTANCE.fromDO(orderDO);
     }
 
     @Override
-    public List<Order> findByCondition(OrderQueryRequest request) {
+    public List<Order> ordersOfCondition(OrderQueryRequest request) {
         List<OrderDO> orderDOList = orderDAO.selectByCondition(request);
         return OrderDOConverter.INSTANCE.fromDOList(orderDOList);
     }

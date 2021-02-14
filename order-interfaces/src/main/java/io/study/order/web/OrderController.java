@@ -51,7 +51,7 @@ public class OrderController {
     @ApiOperation("根据订单ID获取订单")
     @GetMapping("/find/{id}")
     public OrderDTO findOrder(@PathVariable Long id) {
-        Order order = orderRepository.find(OrderId.of(id));
+        Order order = orderRepository.orderOfId(OrderId.of(id));
         return OrderDTOAssembler.INSTANCE.toDTO(order);
     }
 }

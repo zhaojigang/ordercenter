@@ -17,18 +17,21 @@ public interface OrderRepository {
      *
      * @param order 订单
      */
-    void save(Order order);
+    void add(Order order);
 
     /**
      * 根据订单ID获取订单
+     *
      * @param orderId
+     * @return
      */
-    Order find(OrderId orderId);
+    Order orderOfId(OrderId orderId);
 
     /**
      * 根据条件查询请求
+     *
      * @param request
      * @return
      */
-    List<Order> findByCondition(OrderQueryRequest request);
+    List<Order> ordersOfCondition(OrderQueryRequest request);
 }
