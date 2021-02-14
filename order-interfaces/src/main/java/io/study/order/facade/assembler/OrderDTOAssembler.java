@@ -2,7 +2,7 @@ package io.study.order.facade.assembler;
 
 import io.study.order.domain.Order;
 import io.study.order.dto.OrderDTO;
-import io.study.order.factory.OrderFactory;
+import io.study.order.domain.OrderFactory;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;

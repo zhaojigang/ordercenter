@@ -1,7 +1,7 @@
 package io.study.order.data;
 
 import io.study.order.domain.Order;
-import io.study.order.factory.OrderFactory;
+import io.study.order.domain.OrderFactory;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;

@@ -2,14 +2,16 @@ package io.study.order.domain;
 
 import common.ddd.AggregateRoot;
 import io.study.order.repository.OrderRepository;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 订单聚合根
  *
  * @author jigang
  */
-@Data
+@Setter
+@Getter
 @AggregateRoot
 public class Order {
     /**
@@ -33,7 +35,7 @@ public class Order {
      */
     private OrderRepository orderRepository;
 
-    public Order(OrderRepository orderRepository) {
+    protected Order(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 
