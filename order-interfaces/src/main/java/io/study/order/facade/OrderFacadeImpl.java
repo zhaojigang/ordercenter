@@ -5,7 +5,7 @@ import io.study.order.domain.Order;
 import io.study.order.dto.OrderDTO;
 import io.study.order.dto.OrderQueryRequest;
 import io.study.order.repository.OrderRepository;
-import io.study.order.facade.assembler.OrderDTOAssembler;
+import io.study.order.assembler.OrderDTOAssembler;
 import org.apache.dubbo.config.annotation.DubboService;
 
 import javax.annotation.Resource;

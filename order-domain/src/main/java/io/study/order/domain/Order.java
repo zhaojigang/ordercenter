@@ -4,7 +4,6 @@ import common.ddd.AggregateRoot;
 import common.exception.OrderException;
 import io.study.order.repository.OrderRepository;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -12,7 +11,6 @@ import lombok.Setter;
  *
  * @author jigang
  */
-@NoArgsConstructor
 @Setter
 @Getter
 @AggregateRoot

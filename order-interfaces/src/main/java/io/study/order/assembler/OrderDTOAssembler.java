@@ -1,4 +1,4 @@
-package io.study.order.facade.assembler;
+package io.study.order.assembler;
 
 import io.study.order.domain.Order;
 import io.study.order.dto.OrderDTO;

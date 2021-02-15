@@ -5,7 +5,7 @@ import io.study.order.domain.Order;
 import io.study.order.domain.OrderId;
 import io.study.order.dto.OrderDTO;
 import io.study.order.repository.OrderRepository;
-import io.study.order.facade.assembler.OrderDTOAssembler;
+import io.study.order.assembler.OrderDTOAssembler;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
